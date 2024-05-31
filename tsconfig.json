@@ -3,15 +3,15 @@
     "strict": true,
     "esModuleInterop": true,
     "sourceMap": true,
-    "declaration": false,
+    "declaration": true,
     "target": "es2019",
     "module": "commonjs",
     "moduleResolution": "node",
     "outDir": "dist",
     "pretty": true,
     "noUnusedLocals": false,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "removeComments": false
   },
   "include": ["src/**/*"]
 }
-

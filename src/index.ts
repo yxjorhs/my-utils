@@ -5,9 +5,10 @@ import crypto from "crypto";
 import RPC from "./rpc";
 
 interface IMyUtils {
-  /** 字符串工具 */
-  string: typeof stringUtils;
+  /** 生成随机32位字符串id */
+  uid(): string;
 
+  /** 发送网络请求 */
   request: typeof RPC.sendHttp;
 
   /**
@@ -15,14 +16,9 @@ interface IMyUtils {
    * @param url 网络资源地址
    */
   netResourceReadStream(url: string): Writable;
-
-  /** 生成随机32位字符串id */
-  uid(): string;
 }
 
 class MyUtils implements IMyUtils {
-  string = stringUtils;
-
   request = RPC.sendHttp;
 
   netResourceReadStream(url: string): Writable {
