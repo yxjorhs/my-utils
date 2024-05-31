@@ -1,6 +1,6 @@
 {
   "name": "my-utils",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "license": "ISC",
   "author": "yxjorhs",
   "main": "dist/index.js",
@@ -10,7 +10,7 @@
   ],
   "scripts": {
     "compile": "rm -rf dist && tsc",
-    "release": "npm run build && standard-version && git push --follow-tags && npm publish",
+    "release": "npm run compile && standard-version && git push --follow-tags && npm publish",
     "test": "mocha",
     "test-cov": "nyc mocha"
   },
