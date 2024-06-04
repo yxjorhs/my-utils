@@ -14,10 +14,13 @@
     "test": "mocha",
     "test-cov": "nyc mocha"
   },
-  "dependencies": {},
+  "dependencies": {
+    "lodash": "^4.17.21"
+  },
   "devDependencies": {
     "@commitlint/cli": "^13.1.0",
     "@commitlint/config-conventional": "^13.1.0",
+    "@types/lodash": "^4.17.4",
     "@types/mocha": "8.x",
     "@types/node": "^14.x",
     "husky": "^7.0.1",
@@ -25,7 +28,7 @@
     "nyc": "15.x",
     "standard-version": "^9.1.1",
     "ts-node": "8.x",
-    "typescript": "3.x"
+    "typescript": "4.8.4"
   },
   "publishConfig": {
     "access": "public"

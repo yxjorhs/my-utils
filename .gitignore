@@ -1,6 +1,7 @@
 .nyc_output
-/coverage
-/dist
-/node_modules
-/temp
-/**/*.sw?
+coverage
+dist
+node_modules
+temp
+**/*.sw?
+*.sw?
