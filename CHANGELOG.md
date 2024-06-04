@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.7](https://github.com/yxjorhs/my-utils/compare/v0.0.6...v0.0.7) (2024-06-04)
+
+
+### Features
+
+* add request, remove netResourceReadStream ([0993d4d](https://github.com/yxjorhs/my-utils/commit/0993d4d3af16182359957e602d2f8b9a8ec69e46))
+
 ### [0.0.6](https://github.com/yxjorhs/my-utils/compare/v0.0.5...v0.0.6) (2024-05-31)
 
 ### [0.0.5](https://github.com/yxjorhs/my-utils/compare/v0.0.4...v0.0.5) (2024-05-31)
