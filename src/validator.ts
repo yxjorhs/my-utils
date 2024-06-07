@@ -23,7 +23,9 @@ export function isuint(v: any): v is number {
  * @return boolean
  */
 export function isEmail(v: any): v is string {
-  return /^[A-Za-zd0-9]+([-_.][A-Za-zd]+)*@([A-Za-zd]+[-.])+[A-Za-zd]{2,5}$/.test(v);
+  return /^[A-Za-zd0-9]+([-_.][A-Za-zd]+)*@([A-Za-zd]+[-.])+[A-Za-zd]{2,5}$/.test(
+    v
+  );
 }
 
 /**
@@ -73,4 +75,12 @@ export function isString(v: any, option?: IsStringOption): v is string {
   }
 
   return res;
+}
+
+/** 是否是时间字符串(格式: YYYY/MM/DD HH:mm:ss) */
+export function isDateString(v: any): boolean {
+  return (
+    !isNaN(new Date(v).getTime()) &&
+    /^\d{4}\/\d{2}\/\d{2} \d{2}:\d{2}:\d{2}(.\d{3})?$/.test(v)
+  );
 }

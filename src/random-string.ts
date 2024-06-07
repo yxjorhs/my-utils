@@ -1,14 +1,11 @@
-import crypto, { BinaryToTextEncoding } from "crypto";
+import crypto, { HexBase64Latin1Encoding } from "crypto";
 
 /**
  * 生成随机字符串
  * @param len 随机字符串长度
  * @param encoding 随机字符串的编码
  */
-export function randomString(
-  len: number,
-  encoding: BinaryToTextEncoding
-): string {
+export function randomString(len: number, encoding: HexBase64Latin1Encoding): string {
   let res = "";
 
   while (res.length < len) {
