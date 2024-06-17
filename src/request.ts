@@ -5,7 +5,9 @@ import https from "https";
 import { Readable } from "stream";
 
 /** 发送网络请求 */
-export function request(options: RequestOptions | string | URL): Promise<Requester> {
+export function request(
+  options: RequestOptions | string | URL
+): Promise<Requester> {
   let protocol: string;
   let body: Buffer | Readable | undefined;
 
@@ -18,7 +20,8 @@ export function request(options: RequestOptions | string | URL): Promise<Request
     if (options.query) {
       let u = new URL(`${protocol}//${options.host}`);
 
-      if (options.port !== undefined && options.port !== null) u.port = options.port?.toString();
+      if (options.port !== undefined && options.port !== null)
+        u.port = options.port?.toString();
 
       if (options.path) u.pathname = options.path;
 
@@ -116,7 +119,9 @@ class Requester implements IRequester {
           try {
             res = JSON.parse(buf.toString());
           } catch (e: any) {
-            throw new Error(`解析json失败, message: ${e.message}, content: ${buf.toString()}`);
+            throw new Error(
+              `解析json失败, message: ${e.message}, content: ${buf.toString()}`
+            );
           }
           return resolve(res);
         }
@@ -128,12 +133,16 @@ class Requester implements IRequester {
 
   buffer(): Promise<Buffer> {
     assert(!this.isEnd, "响应结束");
+
     return new Promise((resolve) => {
-      let buf = Buffer.from("");
+      let buf: Buffer = Buffer.from("");
 
-      this.incomingMessage.on("data", (data) => (buf += data));
+      this.incomingMessage.on(
+        "data",
+        (data) => (buf = Buffer.concat([buf, data]))
+      );
 
-      this.incomingMessage.on("end", () => resolve(buf));
+      this.incomingMessage.on("end", () => resolve(Buffer.from(buf)));
     });
   }
 }
