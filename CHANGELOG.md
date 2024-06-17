@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.2](https://github.com/yxjorhs/my-utils/compare/v0.2.1...v0.2.2) (2024-06-17)
+
+
+### Bug Fixes
+
+* request buffer ([66ef7ac](https://github.com/yxjorhs/my-utils/commit/66ef7acf41230e10f5c4a419c0be4d3fb3a055b4))
+
 ### [0.2.1](https://github.com/yxjorhs/my-utils/compare/v0.1.1...v0.2.1) (2024-06-07)
 
 ### [0.1.1](https://github.com/yxjorhs/my-utils/compare/v0.0.7...v0.1.1) (2024-06-07)
